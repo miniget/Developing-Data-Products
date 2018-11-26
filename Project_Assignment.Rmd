@@ -1,0 +1,28 @@
+---
+title: "Developing Data Products Project Assignment Week2"
+author: "Menelik G. Wondimu"
+date: "November 25, 2018"
+output: html_document
+---
+
+## Introduction
+
+The R package leaflet is an interface to the JavaScript library which helps to create interactive web maps. It is one of the most popular open-source JavaScript libraries for interactive maps. It powers interactive maps on the web. Leaflet produces maps have controls to zoom, pan and toggle layers on and off, and can combine local data with base layers from web mapping services. Maps will appear in RStudio's Viewer pane, and can also be viewed in a web browser and saved as html files.
+
+In this project assignment, I used the skills i got from leaflet to develop aweb page feature with an interactive map locating the spatial location of My Homeland.
+
+
+```{r setup, include=FALSE}
+library(leaflet)
+```
+
+
+```{r My homeland, include=TRUE}
+
+Mini <- leaflet() %>%
+        addTiles() %>%  # Add default OpenStreetMap map tiles
+        addMarkers(lng=38.7578, lat=8.9806,
+                   popup="My Homeland")  ## Latitude and longitude of my homeland
+Mini  # Print the map
+```
+
